@@ -41,9 +41,12 @@ use({
 https://github.com/nvim-treesitter/nvim-treesitter
 https://github.com/nvim-treesitter/playground
 
-# file list switch: ThePrimeagen/harpoon
-# git branch edit: mbbill/undotree')
-# git operate: tpope/vim-fugitive
+# file list switch: 
+ThePrimeagen/harpoon
+# git branch edit: 
+mbbill/undotree
+# git operate: 
+tpope/vim-fugitive
 
 # lsp (language server)
 https://github.com/VonHeikemen/lsp-zero.nvim
