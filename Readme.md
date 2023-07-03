@@ -5,7 +5,14 @@ I was using vim for many years, but I found nvim is more beautiful. So, maybe I 
 *   [0 to LSP: Neovim RC from Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE&list=WL&index=44)
 *   https://github.com/ThePrimeagen/init.lua
 
-# Plugin Manager
+# How to cook
+```
+rm ~/.config/nvim
+git clone https://github.com/zzuse/nvim_config.git ~/.config/nvim
+```
+
+# Specification or Key Bindings
+## Plugin Manager
 https://github.com/wbthomason/packer.nvim
 ```shell
 # install
@@ -17,7 +24,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 :PackerSync
 ```
 
-# Fuzzy file finder
+## Fuzzy file finder
 https://github.com/nvim-telescope/telescope.nvim
 ```shell
 <leader>ff # file finder of telescope plugin, MODIFIED key adjust my habit
@@ -30,7 +37,7 @@ vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
 vim.keymap.set('n', '<leader>ps', function() builtin.grep_string({ search = vim.fn.input("Grep > ") });
 ```
 
-# Color: Rose Pine
+## Color: Rose Pine
 https://github.com/rose-pine/neovim
 ```lua
 use({
@@ -42,14 +49,14 @@ use({
   })
 ```
 
-# Highlight color: Tree Sitter
+## Highlight color: Tree Sitter
 https://github.com/nvim-treesitter/nvim-treesitter
 https://github.com/nvim-treesitter/playground  # just an highlight AST play tool, not useful for me
 ```
 :so # source out when you adding more languages
 ```
 
-# Fast file list switch: 
+## Fast file list switch: 
 ThePrimeagen/harpoon
 ```
 vim.keymap.set("n", "<leader>a", mark.add_file)
@@ -60,19 +67,19 @@ vim.keymap.set("n", "<C-h>", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
 ```
 
-# Undo (git commit tree like): 
+## Undo (git commit tree like): 
 mbbill/undotree
 ```
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 ```
 
-# Git manipulate: 
+## Git manipulate: 
 tpope/vim-fugitive
 ```
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 ```
 
-# Lsp (language server for complete, lint and format) 
+## Lsp (language server for complete, lint and format) 
 https://github.com/VonHeikemen/lsp-zero.nvim
 ```vim
 :Mason # choose which languge to support
@@ -92,7 +99,7 @@ lsp.setup_nvim_cmp({
 })
 ```
 
-# Others
+## Others
 ```vim
 :h rtp # runtime variable
 "%" # create file 
