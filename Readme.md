@@ -99,6 +99,15 @@ lsp.setup_nvim_cmp({
 })
 ```
 
+## Auto pairs
+windwp/nvim-autopairs
+```
+use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
+```
+
 ## Others
 ```vim
 :h rtp # runtime variable

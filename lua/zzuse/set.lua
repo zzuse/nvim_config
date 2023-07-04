@@ -27,3 +27,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
+
+vim.opt.mps = vim.opt.mps + '<:>' -- use % to match not only () but also <>
+vim.opt.ic = true -- ignore case
+vim.opt.smartcase = true -- Case sensitive if we type an upper case

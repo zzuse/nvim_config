@@ -19,3 +19,7 @@ vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>
 
 -- change file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- quit write
+vim.keymap.set("n", "<leader>q", ":q <CR>")
+vim.keymap.set('n', '<Leader>w', ':write<CR>')
