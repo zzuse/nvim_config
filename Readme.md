@@ -1,10 +1,11 @@
 # Why
-I was using vim for many years, but I found nvim is more beautiful. So, maybe I will convert all my vim old scripts to nvim lua scripts. Here will be my configure repo...
+I was using vim for many years, but I found nvim is more beautiful and simple for plugin system. So, maybe I will convert all my vim old scripts to nvim lua scripts. Here will be my configure repo...
 
 # Ref
 *   [0 to LSP: Neovim RC from Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE&list=WL&index=44)
 *   https://github.com/ThePrimeagen/init.lua
 
+#############################################################
 # How to cook
 ```
 rm ~/.config/nvim
@@ -27,8 +28,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ## Fuzzy file finder
 https://github.com/nvim-telescope/telescope.nvim
 ```shell
-<leader>ff # file finder of telescope plugin, MODIFIED key adjust my habit
-<leader>fg # git file finder of telescope plugin, MODIFIED key adjust my habit
+<leader>ff # file finder of telescope plugin,
+<leader>fg # git file finder of telescope plugin,
 <leader>ps # grep in files of telescope plugin
 ```
 ```lua
@@ -51,9 +52,9 @@ use({
 
 ## Highlight color: Tree Sitter
 https://github.com/nvim-treesitter/nvim-treesitter
-https://github.com/nvim-treesitter/playground  # just an highlight AST play tool, not useful for me
 ```
 :so # source out when you adding more languages
+// https://github.com/nvim-treesitter/playground  # just an highlight AST play tool, not useful for me
 ```
 
 ## Fast file list switch: 
@@ -76,7 +77,9 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 ## Git manipulate: 
 tpope/vim-fugitive
 ```
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+support using Git in Vim: only need to change 'G' to uppercase. such as: 'git log' in shell, now become vim ':Git log' 
+manipulate current file in vim: ':Gwrite' save to buffer ':Gread' abandon change, move/rename/delete/blame :GMove, :GRename, :GDelete :Git blame
+':Gvdiff' for git diff 
 ```
 
 ## Lsp (language server for complete, lint and format) 
