@@ -114,10 +114,10 @@ use {
 ## Others
 ```vim
 :h rtp # runtime variable
-"%" # create file 
-"d" # create directory
-"D" # delete a file
 :Ex # back to explore directory, in the repo this command remapped to <leader>pv
+"%" # explore directory, create file 
+"d" # explore directory, create directory
+"D" # explore directory, delete a file
 :so # source to environment
 :PackerSync # the Packer plugin manager
 ```
