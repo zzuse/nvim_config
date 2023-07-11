@@ -121,4 +121,12 @@ use {
 :so # source to environment
 :PackerSync # the Packer plugin manager
 ```
-
+# personal usage about plugin
+```
+Plugin name add in lua/zzuse/packer.lua
+Plugin configuration and keymap change in after/plugin per directory
+Such as: lsp.lua change below mapping for select
+    ['<S-p>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<S-n>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<S-y>'] = cmp.mapping.confirm({ select = true }),
+```
