@@ -27,7 +27,8 @@ return require('packer').startup(function(use)
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
-  use('feline-nvim/feline.nvim')
+  use('freddiehaddad/feline.nvim')
+  use('lewis6991/gitsigns.nvim')
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
