@@ -133,8 +133,8 @@ freddiehaddad/feline.nvim
 ```
 # personal usage about plugin
 ```
-Plugin name add in lua/zzuse/packer.lua
-Plugin configuration and keymap change in after/plugin per directory
+Plugin need add name to lua/zzuse/packer.lua
+Plugin custom configuration and keymap change in after/plugin per file
 Such as: lsp.lua change below mapping for select
     ['<S-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<S-n>'] = cmp.mapping.select_next_item(cmp_select),
