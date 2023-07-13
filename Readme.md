@@ -11,7 +11,11 @@ I was using vim for many years, but I found nvim is more beautiful and simple fo
 rm ~/.config/nvim
 git clone https://github.com/zzuse/nvim_config.git ~/.config/nvim
 ```
-
+# Requirement
+```
+neovim 0.8+
+for some plugin working properly you may need neovim 0.9.1, or night build
+```
 # Specification or Key Bindings
 ## Plugin Manager
 https://github.com/wbthomason/packer.nvim
@@ -110,6 +114,12 @@ use {
     config = function() require("nvim-autopairs").setup {} end
 }
 ```
+
+## Auto Html Tag
+windwp/nvim-ts-autotag
+
+## Status Line
+freddiehaddad/feline.nvim
 
 ## Others
 ```vim
