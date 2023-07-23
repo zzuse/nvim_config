@@ -121,6 +121,9 @@ windwp/nvim-ts-autotag
 ## Status Line
 freddiehaddad/feline.nvim
 
+## CSS color
+NvChad/nvim-colorizer.lua
+
 ## Others
 ```vim
 :h rtp # runtime variable

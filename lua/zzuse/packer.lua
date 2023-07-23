@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
   use("windwp/nvim-ts-autotag")
   use('freddiehaddad/feline.nvim')
   use('lewis6991/gitsigns.nvim')
+  use('NvChad/nvim-colorizer.lua')
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
