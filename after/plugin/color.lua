@@ -1,3 +1,8 @@
+require 'colorizer'.setup{
+    buftypes = {
+      "*",
+    }
+}
 
 function ColorMyPencils(color)
 	color = color or "rose-pine"
@@ -9,4 +14,3 @@ end
 
 ColorMyPencils()
 
-require 'colorizer'.setup()
