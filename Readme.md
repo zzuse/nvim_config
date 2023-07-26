@@ -124,6 +124,9 @@ freddiehaddad/feline.nvim
 ## CSS color
 NvChad/nvim-colorizer.lua
 
+## Rainbow-delimiter
+HiPhish/rainbow-delimiters.nvim
+
 ## Others
 ```vim
 :h rtp # runtime variable

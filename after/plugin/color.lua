@@ -1,4 +1,8 @@
 require 'colorizer'.setup{
+    filetypes = {
+      "*",
+      cmp_docs = {always_update = true}
+    },
     buftypes = {
       "*",
     }

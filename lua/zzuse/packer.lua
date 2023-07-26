@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
   use('freddiehaddad/feline.nvim')
   use('lewis6991/gitsigns.nvim')
   use('NvChad/nvim-colorizer.lua')
+  use('HiPhish/rainbow-delimiters.nvim')
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
