@@ -47,5 +47,4 @@ A modern, fast, and minimalist Neovim configuration tailored for **Neovim 0.11+*
 ## 📝 Recent Fixes (v1.1)
 - Fixed `nvim-treesitter` breaking changes by pinning to the `master` branch.
 - Resolved `mason-lspconfig` compatibility issues for Neovim 0.11+.
-- Hardcoded `GOROOT` detection for Homebrew-based Go installations.
 - Replaced non-standard Unicode symbols with ASCII alternatives for universal terminal support.

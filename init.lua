@@ -1,8 +1,5 @@
 -- ~/.config/nvim/init.lua
 
--- Fix Go environment for Homebrew
-vim.env.GOROOT = "/opt/homebrew/opt/go/libexec"
-
 -- 加速启动（可选，Neovim 0.9+）
 vim.loader.enable()
 
