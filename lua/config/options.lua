@@ -60,5 +60,5 @@ vim.cmd.colorscheme('molokai')
 
 -- GUI 字体（只在 gui 时生效）
 if vim.g.neovide or vim.fn.has('gui_running') == 1 then
-  opt.guifont = 'Consolas:h12:cANSI'
+  opt.guifont = 'MesloLGS NF:h12'
 end

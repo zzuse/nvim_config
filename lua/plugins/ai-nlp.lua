@@ -21,18 +21,39 @@ return {
         "Robitx/gp.nvim",
         config = function()
             require("gp").setup({
+                openai_api_key = "dummy",
                 providers = {
-                    gemini = {
-                        endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
+                    openai = {disable = true},
+                    googleai = {
+                        disable = false,
+                        endpoint = "https://generativelanguage.googleapis.com/v1beta/models/{{model}}:streamGenerateContent?key={{secret}}",
                         secret = os.getenv("GEMINI_API_KEY")
                     }
                     -- 可同时加 ollama（本地）或其他
                 },
                 -- 默认用 gemini 模型
-                default_chat_model = {
-                    provider = "gemini",
-                    model = "gemini-3-flash"
+                agents = {
+                    {
+                        name = "GeminiChat",
+                        chat = true,
+                        command = false,
+                        provider = "googleai",
+                        model = { model = "gemini-flash-latest", temperature = 1.1, top_p = 1 },
+                        system_prompt = "You are a helpful AI assistant.",
+                    },
+                    {
+                        name = "GeminiCode",
+                        chat = false,
+                        command = true,
+                        provider = "googleai",
+                        model = { model = "gemini-flash-latest", temperature = 0.8, top_p = 1 },
+                        system_prompt = "You are an AI programming assistant.",
+                    },
                 },
+                default_chat_agent = "GeminiChat",
+                default_command_agent = "GeminiCode",
+                whisper = { disable = true },
+                image = { disable = true },
                 hooks = {
                     -- :GpChatNew → 新聊天窗口
                     -- :GpWhisper → 语音输入（需麦克风）
