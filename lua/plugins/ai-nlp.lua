@@ -24,9 +24,9 @@ return {
                 openai_api_key = "dummy",
                 providers = {
                     openai = {disable = true},
-                    googleai = {
+                    gemini = {
                         disable = false,
-                        endpoint = "https://generativelanguage.googleapis.com/v1beta/models/{{model}}:streamGenerateContent?key={{secret}}",
+                        endpoint = "https://generativelanguage.googleapis.com/v1beta/openai/v1/chat/completions",
                         secret = os.getenv("GEMINI_API_KEY")
                     }
                     -- 可同时加 ollama（本地）或其他
@@ -37,16 +37,16 @@ return {
                         name = "GeminiChat",
                         chat = true,
                         command = false,
-                        provider = "googleai",
-                        model = { model = "gemini-flash-latest", temperature = 1.1, top_p = 1 },
+                        provider = "gemini",
+                        model = { model = "gemini-pro-latest", temperature = 1.1, top_p = 1 },
                         system_prompt = "You are a helpful AI assistant.",
                     },
                     {
                         name = "GeminiCode",
                         chat = false,
                         command = true,
-                        provider = "googleai",
-                        model = { model = "gemini-flash-latest", temperature = 0.8, top_p = 1 },
+                        provider = "gemini",
+                        model = { model = "gemini-pro-latest", temperature = 0.8, top_p = 1 },
                         system_prompt = "You are an AI programming assistant.",
                     },
                 },
